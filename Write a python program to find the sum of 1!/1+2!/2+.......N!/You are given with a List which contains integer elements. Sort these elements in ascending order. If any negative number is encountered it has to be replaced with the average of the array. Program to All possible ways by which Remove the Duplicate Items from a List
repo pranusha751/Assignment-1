@@ -1,0 +1,9 @@
+numbers = [3, -1, 4, 1, -5, 9, 2, -6]
+average = sum(num for num in numbers if num >= 0) / len([num for num in numbers if num >= 0])
+sorted_numbers = [average if num < 0 else num for num in numbers]
+sorted_numbers.sort()
+unique_numbers = []
+for num in sorted_numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+print(unique_numbers)
